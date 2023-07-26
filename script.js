@@ -1,6 +1,8 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import * as dat from 'lil-gui'
+import GUI from 'lil-gui'
+
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 THREE.ColorManagement.enabled = false
 
@@ -8,13 +10,29 @@ THREE.ColorManagement.enabled = false
  * Base
  */
 // Debug
-const gui = new dat.GUI()
+const gui = new GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
+
+/**
+ * Models
+ */
+const gltfLoader = new GLTFLoader();
+
+//TODO: configure static folder
+gltfLoader.load(
+	"/static/game_boy_original/scene.gltf",
+	(gltf) => {
+		console.log("loaded!");
+		console.log(gltf);
+		scene.add(gltf.scene)
+	},
+
+);
 
 // Axes
 //const axesHelper = new THREE.AxesHelper();
@@ -64,6 +82,13 @@ scene.add(camera)
 // Controls
 const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
+
+/**
+ * Lights
+ */
+//FIXME: 
+const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+scene.add(ambientLight)
 
 /**
  * Renderer
