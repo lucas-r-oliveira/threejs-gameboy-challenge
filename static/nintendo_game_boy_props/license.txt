@@ -1,0 +1,11 @@
+Model Information:
+* title:	Nintendo Game boy_props
+* source:	https://sketchfab.com/3d-models/nintendo-game-boy-props-9040d1af26114cc7be06f0146a8bb570
+* author:	AizSeday (https://sketchfab.com/Yuliya.Badyul)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Nintendo Game boy_props" (https://sketchfab.com/3d-models/nintendo-game-boy-props-9040d1af26114cc7be06f0146a8bb570) by AizSeday (https://sketchfab.com/Yuliya.Badyul) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
